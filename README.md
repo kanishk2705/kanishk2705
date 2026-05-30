@@ -90,11 +90,11 @@ print(me.motto())
 ## 📊 GitHub Stats
 
 <div align="center">
-  <a href="https://github.com/ackanishk">
-    <img height="170" src="https://github-readme-stats.vercel.app/api?username=ackanishk&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=70a5fd&icon_color=bf91f3&text_color=c9d1d9&border_radius=10"/>
+  <a href="https://github.com/kanishk2705">
+    <img height="170" src="https://github-readme-stats.vercel.app/api?username=kanishk2705&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=70a5fd&icon_color=bf91f3&text_color=c9d1d9&border_radius=10"/>
   </a>
-  <a href="https://github.com/ackanishk">
-    <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ackanishk&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70a5fd&text_color=c9d1d9&langs_count=8&border_radius=10"/>
+  <a href="https://github.com/kanishk2705">
+    <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kanishk2705&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=70a5fd&text_color=c9d1d9&langs_count=8&border_radius=10"/>
   </a>
 </div>
 
@@ -103,7 +103,7 @@ print(me.motto())
 ## 🔥 Streak Stats
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com?user=ackanishk&theme=tokyonight-duo&hide_border=true&background=0D1117&ring=70A5FD&fire=BF91F3&currStreakLabel=70A5FD&sideLabels=38BDAE&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&stroke=0D1117&border_radius=10" alt="GitHub Streak"/>
+  <img src="https://streak-stats.demolab.com?user=kanishk2705&theme=tokyonight-duo&hide_border=true&background=0D1117&ring=70A5FD&fire=BF91F3&currStreakLabel=70A5FD&sideLabels=38BDAE&dates=8B949E&currStreakNum=C9D1D9&sideNums=C9D1D9&stroke=0D1117&border_radius=10" alt="GitHub Streak"/>
 </div>
 
 ---
@@ -111,7 +111,7 @@ print(me.motto())
 ## 📈 Activity Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ackanishk&theme=tokyo-night&bg_color=0d1117&color=70a5fd&line=bf91f3&point=38bdae&area=true&hide_border=true" width="100%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=kanishk2705&theme=tokyo-night&bg_color=0d1117&color=70a5fd&line=bf91f3&point=38bdae&area=true&hide_border=true" width="100%"/>
 </div>
 
 ---
@@ -119,7 +119,7 @@ print(me.motto())
 ## 🏆 Trophy Wall
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ackanishk&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=4"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=kanishk2705&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7&margin-w=4"/>
 </div>
 
 ---
@@ -151,9 +151,9 @@ print(me.motto())
 
 | Project | Stack | Highlights |
 |:--------|:------|:-----------|
-| [**🤖 Smart Resume Analyzer**](https://github.com/ackanishk) | Python · SBERT · Gemini 2.0 · Docker · Streamlit | Semantic ATS replacing keyword matching; integrated Google Gemini 2.0 Flash for "Career Coach" skill-gap detection; deployed as production-ready Docker microservice with layer-cached startup |
-| [**📈 Market Sentiment Intelligence System**](https://github.com/ackanishk) | Python · FinBERT · PostgreSQL · GitHub Actions · Streamlit | Cloud-native financial analytics platform; automated daily ETL via GitHub Actions ("zero-touch"); Supabase-backed real-time sentiment dashboard with automated SMTP risk alerts |
-| [**📱 Digital Detox Predictor**](https://github.com/ackanishk) | Python · Scikit-Learn · Random Forest · Streamlit | Champion Random Forest model achieving **97.99% accuracy**; 22-dimensional feature vectors via One-Hot Encoding; live risk assessments ("Safe" → "Critical") on Streamlit Community Cloud |
+| [**🤖 Smart Resume Analyzer**](https://github.com/kanishk2705) | Python · SBERT · Gemini 2.0 · Docker · Streamlit | Semantic ATS replacing keyword matching; integrated Google Gemini 2.0 Flash for "Career Coach" skill-gap detection; deployed as production-ready Docker microservice with layer-cached startup |
+| [**📈 Market Sentiment Intelligence System**](https://github.com/kanishk2705) | Python · FinBERT · PostgreSQL · GitHub Actions · Streamlit | Cloud-native financial analytics platform; automated daily ETL via GitHub Actions ("zero-touch"); Supabase-backed real-time sentiment dashboard with automated SMTP risk alerts |
+| [**📱 Digital Detox Predictor**](https://github.com/kanishk2705) | Python · Scikit-Learn · Random Forest · Streamlit | Champion Random Forest model achieving **97.99% accuracy**; 22-dimensional feature vectors via One-Hot Encoding; live risk assessments ("Safe" → "Critical") on Streamlit Community Cloud |
 
 </div>
 
