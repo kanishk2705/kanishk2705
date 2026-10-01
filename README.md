@@ -106,7 +106,7 @@ They are intentionally different from one another, but together reflect the area
 
 ---
 
-## 01 · 🧠 AI Multi-Condition Patient Information Assistant
+## 01 · AI Multi-Condition Patient Information Assistant
 
 **Healthcare AI · RAG · NLP · LLMs**
 
@@ -128,7 +128,7 @@ The goal is not simply to make a chatbot, but to understand how **retrieval qual
 
 ---
 
-## 02 · 📚 Retrieval-Augmented Research Assistant
+## 02 · Retrieval-Augmented Research Assistant
 
 **NLP · RAG · LLM Applications**
 
@@ -152,7 +152,7 @@ The system is designed around a simple question:
 
 ---
 
-## 03 · ⚡ Real-Time Data Engineering Pipeline
+## 03 · Real-Time Data Engineering Pipeline
 
 **Data Engineering · Streaming · Distributed Systems**
 
@@ -180,7 +180,7 @@ The project focuses on the engineering side of data:
 
 ---
 
-## 04 · 🔍 Real-Time Financial Fraud Detection Pipeline
+## 04 · Real-Time Financial Fraud Detection Pipeline
 
 **Streaming ML · Fraud Detection · Explainable AI**
 
@@ -210,7 +210,7 @@ For evaluation, I focus on metrics that actually matter for imbalanced classific
 
 ---
 
-## 05 · 🔄 Continuous Training System for E-Commerce Pricing
+## 05 · Continuous Training System for E-Commerce Pricing
 
 **MLOps · Model Monitoring · Continuous Training**
 
@@ -390,32 +390,6 @@ The experience helped me move from studying machine learning concepts toward thi
 ### Areas I'm building around
 
 `Mathematics & Statistics` · `Machine Learning` · `Deep Learning` · `NLP` · `Data Science` · `EDA` · `Algorithms` · `Databases` · `Big Data` · `Distributed Computing`
-
----
-
-# 📈 GitHub Activity
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=kanishk-ac&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&count_private=false" height="170"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=kanishk-ac&hide_border=true" height="170"/>
-
-<br><br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=kanishk-ac&hide_border=true" width="95%"/>
-
-</div>
-
----
-
-# 🐍 Contribution Activity
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/kanishk-ac/kanishk-ac/output/github-contribution-grid-snake.svg" width="95%"/>
-
-</div>
 
 ---
 
