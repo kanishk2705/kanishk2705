@@ -97,7 +97,7 @@ Currently, I'm exploring:
 
 ### 01
 
-🧠
+
 
 </td>
 
@@ -135,7 +135,7 @@ An AI-powered information assistant that retrieves relevant information from a c
 
 ### 02
 
-📚
+
 
 </td>
 
@@ -173,7 +173,7 @@ A document-based research assistant for working with research papers and technic
 
 ### 03
 
-⚡
+
 
 </td>
 
@@ -211,7 +211,7 @@ A streaming data system that continuously processes events, performs transformat
 
 ### 04
 
-🔍
+
 
 </td>
 
@@ -251,7 +251,7 @@ Evaluation will emphasize appropriate measures for imbalanced classification suc
 
 ### 05
 
-🔄
+
 
 </td>
 
@@ -416,32 +416,6 @@ This experience provided practical exposure to applying machine learning methods
 **Relevant areas**
 
 `Mathematics & Statistics` · `Algorithms` · `AI/ML` · `Deep Learning` · `NLP` · `EDA` · `Business Analytics` · `Recommender Systems` · `Big Data` · `Distributed Computing` · `Databases` · `DevOps`
-
----
-
-# 📈 GitHub Activity
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=kanishk-ac&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&count_private=false" height="170"/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=kanishk-ac&hide_border=true" height="170"/>
-
-<br><br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=kanishk-ac&hide_border=true" width="95%"/>
-
-</div>
-
----
-
-# 🐍 Contribution Activity
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/kanishk-ac/kanishk-ac/output/github-contribution-grid-snake.svg" width="95%"/>
-
-</div>
 
 ---
 
