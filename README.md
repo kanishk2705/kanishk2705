@@ -124,7 +124,7 @@ The goal is not simply to make a chatbot, but to understand how **retrieval qual
 
 **Status:** 🟡 Building
 
-[Repository](#) · [Architecture](#) · [Demo](#)
+[Repository](https://github.com/kanishk2705/AI-Multi-Condition-Patient-Journey-Assistant) · [Architecture](#) · [Demo](#)
 
 ---
 
