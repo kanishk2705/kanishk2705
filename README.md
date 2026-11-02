@@ -22,11 +22,11 @@ I'm **Kanishk**, a final-year **B.E. Computer Science and Engineering (Hons. in 
 
 The part of computing that interests me most is the **mathematical and analytical side**: probability, statistics, and problems where there is something to understand beneath the surface rather than simply something to implement.
 
-That interest led me to **Machine Learning and Data Science**, and specifically to one question I keep coming back to:
+That interest led me to **Machine Learning and Data Science**, and to one question I keep coming back to:
 
 > **Does this result actually hold up?**
 
-So my projects follow a consistent pattern. I write the evaluation protocol down before I look at the test data, check for leakage, compare against honest baselines, report confidence intervals, and publish the negative results along with the positive ones.
+So my projects follow a consistent pattern: write the evaluation protocol down before looking at the test data, check for leakage, compare against honest baselines, report confidence intervals, and publish the negative results along with the positive ones.
 
 `Problem → Data → Leakage audit → Protocol → Model → Evaluation → Limitations`
 
@@ -34,7 +34,7 @@ So my projects follow a consistent pattern. I write the evaluation protocol down
 
 # 🚀 Featured Projects
 
-Four completed studies, each in a different area, each with a public repository, automated tests and a project page.
+Five completed projects across NLP, computer vision, forecasting, data engineering and generative AI, each with a public repository, automated tests and a live demo or project page.
 
 ---
 
@@ -42,13 +42,13 @@ Four completed studies, each in a different area, each with a public repository,
 
 **NLP · Sentence Embeddings · Explainable Scoring · Leakage Detection**
 
-An explainable resume–job matching service (FastAPI backend + Streamlit client) that embeds resumes sentence by sentence with SBERT and scores them on four self-explaining components.
+An explainable resume–job matching service (FastAPI backend + Streamlit client) that embeds both documents sentence by sentence with SBERT and scores them on four weighted, self-explaining components, with skill-gap analysis, ATS checks and an LLM coach.
 
-Benchmarking it on 8,000 labelled pairs revealed that **476 of 477 test resumes also appear in the training split**. I added a leakage-safe unseen-resume protocol before comparing keyword, embedding, feature-based and fine-tuned models.
+Benchmarking on 8,000 labelled pairs revealed that **476 of 477 test resumes also appear in the training split**, so I added a leakage-safe unseen-resume protocol before comparing models.
 
-- Fine-tuned SBERT (triplet loss) reaches **0.698** within-job AUC on unseen resumes, vs **0.606** for TF-IDF
-- The same model scores **0.808** under the leaky protocol; the gap is the size of the leakage
-- 223 automated tests, CI on every push, public demo with per-visitor rate limits
+- Fine-tuned SBERT (triplet loss) reaches **0.698** within-job AUC on unseen resumes, +0.093 over TF-IDF
+- The same model scores **0.808** when resumes repeat; the gap is the size of the leakage
+- 185 automated tests, CI on every push, public demo
 
 `SBERT` `PyTorch` `FastAPI` `Streamlit` `Docker` `GitHub Actions`
 
@@ -60,11 +60,11 @@ Benchmarking it on 8,000 labelled pairs revealed that **476 of 477 test resumes 
 
 **Computer Vision · Distribution Shift · Calibration · Selective Prediction**
 
-A pre-registered study of what happens when plant-disease classifiers trained on lab photos (PlantVillage) meet field photos (PlantDoc). It compares a scratch CNN with a pretrained ResNet-18 across 3 seeds, with leaf-level splits so the same leaf never appears in two splits.
+A pre-registered study of what happens when classifiers trained on lab photos (PlantVillage) meet field photos (PlantDoc). It compares a scratch CNN with a pretrained ResNet-18 across 3 seeds, using leaf-group-aware splits and perceptual-hash de-duplication.
 
-- Accuracy falls by about **83 percentage points** for both models (≈0.99 → ≈0.15)
+- Accuracy falls by about **83 percentage points** for both models
 - The pretrained advantage was **not demonstrated** under the pre-set decision rule
-- Temperature scaling **did not help** under shift; confidence-based abstention separated right from wrong answers only weakly
+- Temperature scaling **did not help** under shift; confidence separated right from wrong answers only weakly (AUROC 0.59–0.63)
 
 `PyTorch` `torchvision` `Cluster Bootstrap` `229 tests`
 
@@ -79,38 +79,46 @@ A pre-registered study of what happens when plant-disease classifiers trained on
 A pre-registered evaluation of household electricity forecasts as conditions drift from winter into spring. I reformulated the UCI Appliances Energy data into true 10-minute, 1-hour and 1-day-ahead forecasting, and found and fixed a leakage source in the interpolated weather columns.
 
 - LightGBM beats the best baseline by **15% / 11% / 3%** at the three horizons
-- Extra sensor and weather inputs **hurt** at 1 day ahead
-- Retraining helped only at 10 minutes; 80% prediction intervals covered **78–82%**
+- Weather inputs made day-ahead forecasts **34% worse** once temperatures left the training range
+- Retraining helped only at 10 minutes; raw 80% intervals were already calibrated
 
 `LightGBM` `scikit-learn` `Day-Block Bootstrap` `43 tests`
 
-[Repository](https://github.com/kanishk2705/Residential-Energy-Forecasting-Under-Changing-Conditions) · [Project Page](https://kanishk2705.github.io/Residential-Energy-Forecasting-Under-Changing-Conditions/)
+[Repository](https://github.com/kanishk2705/Residential-Energy-Forecasting) · [Project Page](https://kanishk2705.github.io/Residential-Energy-Forecasting/)
 
 ---
 
-## 04 · Constraint-Aware Examination Timetable Optimizer
+## 04 · Market Sentinel: Stock Market News Sentiment Analysis
 
-**Combinatorial Optimization · Constraint Programming · Metaheuristics**
+**Data Engineering · Financial NLP · Walk-Forward Backtesting · App Security**
 
-A pre-registered study of when exact solving pays off for exam timetabling. Exams are vertices of a conflict graph. The study compares greedy constructions, tuned simulated annealing, OR-Tools CP-SAT and a local-search-then-CP-SAT hybrid on 108 held-out instances.
+A multi-user market-intelligence app: a nightly pipeline collects prices and headlines, scores news with FinBERT and sends alerts; a Streamlit app shows technical charts and an LLM briefing, with Supabase Row-Level Security keeping each watchlist private.
 
-- All 1,072 stored timetables were re-checked by an independent validator: **0 hard-constraint violations**
-- Mean excess cost: hybrid **0.05**, CP-SAT 0.24, local search 1.20, best greedy 1.78
-- A measured **size crossover**: CP-SAT wins at medium size, local search at large size
-- A one-feature rule (graph edges ≤ 505 → CP-SAT) beat both fixed policies
+A walk-forward backtest of **3,214 predictions** tested whether the forecast has real skill:
 
-`OR-Tools CP-SAT` `Simulated Annealing` `Graph Colouring` `NumPy`
+- **0 of 13** stocks beat a naive "tomorrow = today" forecast; direction accuracy 49.3–49.8% (coin flip)
+- Switching from Random Forest on prices to Ridge on returns closed about **98%** of the error gap
+- The app labels its forecast as experimental; 9/9 live RLS security checks pass
 
-[Repository](https://github.com/kanishk2705/Constraint-Aware-Examination-Timetable-Optimizer) · [Project Page](https://kanishk2705.github.io/Constraint-Aware-Examination-Timetable-Optimizer/)
+`FinBERT` `Supabase` `Streamlit` `Plotly` `GitHub Actions`
+
+[Repository](https://github.com/kanishk2705/Stock-Market-News-Sentiment-Analysis) · [Live Demo](https://market-sentinel-news.streamlit.app/)
 
 ---
 
-## 🔧 Currently Building
+## 05 · AI Multi-Condition Patient Journey Assistant
 
-| Project | Area | Status |
-| --- | --- | --- |
-| [Stock Market News Sentiment Analysis](https://github.com/kanishk2705/Stock-Market-News-Sentiment-Analysis) | Financial NLP · Data pipelines | 🟡 Being reworked |
-| [AI Multi-Condition Patient Journey Assistant](https://github.com/kanishk2705/AI-Multi-Condition-Patient-Journey-Assistant) | RAG · Grounded generation | 🟡 Spec frozen, build next |
+**Generative AI · RAG · Grounded Generation · AI Safety**
+
+A source-grounded assistant for people living with both asthma and type 2 diabetes. It answers only from 373 public health passages, cites a passage for every sentence, declines when the sources don't cover a question, and routes emergencies to fixed safety messages.
+
+- Correct passage ranked first for **87%** of held-out questions, top five for **97%**
+- Condition-aware retrieval did **not** beat plain semantic search; the gain came from the re-ranker
+- Abstention gate AUROC **0.97**; 78% of answer sentences confirmed by an independent NLI checker
+
+`Hybrid Search` `Cross-Encoder` `ONNX Runtime` `FastAPI` `Render`
+
+[Repository](https://github.com/kanishk2705/AI-Multi-Condition-Patient-Journey-Assistant) · [Live Assistant](https://kanishk2705.github.io/AI-Multi-Condition-Patient-Journey-Assistant/app/)
 
 ---
 
@@ -120,14 +128,15 @@ Only tools used in the projects above or in my internship.
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,c,postgres,pytorch,sklearn,fastapi,docker,git,github&theme=light" />
+<img src="https://skillicons.dev/icons?i=python,javascript,postgres,pytorch,sklearn,fastapi,docker,git,github&theme=light" />
 
 <br><br>
 
+<img src="https://img.shields.io/badge/Sentence_Transformers-111827?style=flat-square"/>
+<img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black"/>
 <img src="https://img.shields.io/badge/LightGBM-111827?style=flat-square"/>
 <img src="https://img.shields.io/badge/XGBoost-337AB7?style=flat-square"/>
-<img src="https://img.shields.io/badge/Sentence_Transformers-111827?style=flat-square"/>
-<img src="https://img.shields.io/badge/OR--Tools_CP--SAT-4285F4?style=flat-square"/>
+<img src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white"/>
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white"/>
 <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white"/>
 <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
@@ -151,14 +160,14 @@ Only tools used in the projects above or in my internship.
 
 # 💼 Experience
 
-### Machine Learning Intern · Pratinik Infotech
+### Machine Learning Intern · Pratinik Infotech, Pune (Remote)
 `April 2026 – June 2026`
 
-Completed all three internship projects (one was required), each taken from data preparation through to a FastAPI service and a Streamlit dashboard:
+Selected through an online assessment. Built three end-to-end ML systems, each with a data pipeline, model, FastAPI service and Streamlit dashboard:
 
-- **Predictive Maintenance:** rolling-window sensor features, XGBoost failure prediction over a 24-hour horizon
-- **Credit Card Fraud Detection:** imbalanced classification with SMOTE and LightGBM, low-latency scoring API
-- **NLP for Customer Support:** TF-IDF + LinearSVC ticket triage with interpretable keyword drivers
+- **Predictive Maintenance:** 28 rolling-window sensor features, XGBoost 24-hour failure warning
+- **Credit Card Fraud Detection:** SMOTE + LightGBM with tiered actions; traced a missed target to label noise in the data generator
+- **NLP Support Ticket Triage:** NLTK + TF-IDF + LinearSVC with confidence-based routing and interpretable keyword drivers
 
 ---
 
